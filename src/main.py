@@ -1,7 +1,6 @@
+from fastapi import FastAPI
+from src.controller.user_profile_controller import user_profile_route
 
-def main():
-    print("Yei!")
+app = FastAPI()
 
-
-if __name__ == "__main__":
-    main()
+app.include_router(user_profile_route)
